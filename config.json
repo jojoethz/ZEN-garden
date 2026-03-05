@@ -1,17 +1,8 @@
 {
   "analysis": {
-<<<<<<< HEAD
-    "dataset": "tutorial_3_add_technologies_carrier"
-  },
-"solver": {
-  "name": "gurobi",
-  "save_duals": true
-}
-=======
     "dataset": "5_multiple_time_steps_per_year"
   },
   "solver": {
     "name": "gurobi"
   }
->>>>>>> 027b5132 (tutorials added)
 }
