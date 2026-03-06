@@ -1,0 +1,7 @@
+{
+  "min_emissions": {
+    "analysis": {
+      "objective": "total_carbon_emissions"
+    }
+  }
+}
