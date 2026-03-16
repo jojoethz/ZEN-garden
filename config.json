@@ -1,6 +1,6 @@
 {
   "analysis": {
-    "dataset": "5_multiple_time_steps_per_year"
+    "dataset": "Europe_but_better"
   },
   "solver": {
     "name": "gurobi"
