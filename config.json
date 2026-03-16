@@ -2,8 +2,8 @@
   "analysis": {
     "dataset": "5_multiple_time_steps_per_year"
   },
-  "solver": {
-    "name": "gurobi",
-    "save_duals": true
-  }
+"solver": {
+  "name": "gurobi",
+  "save_duals": true
+}
 }
