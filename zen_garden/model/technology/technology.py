@@ -1076,6 +1076,9 @@ class Technology(Element):
         n_cons = len(model.constraints.items())
         rules.constraint_technology_on_off()
 
+        #added for comparison to limit investments in 2025
+        rules.constraint_no_investment_2025()   
+
         # if nothing was added we can remove the tech vars again
         if len(model.constraints.items()) == n_cons:
             model.variables.remove("tech_on_var")
@@ -2084,4 +2087,21 @@ class TechnologyRules(GenericRule):
         constraints_3b = lhs_3b <= rhs_3b
         self.constraints.add_constraint(
             "constraint_technology_on_off_capacity_helper_upper_bound", constraints_3b
+        )
+    def constraint_no_investment_2025(self):
+        """No investment in 2025 for all technologies."""
+
+        capacity_addition = self.variables["capacity_addition"]
+        
+        mask_2025 = (
+            capacity_addition.coords["set_time_steps_yearly"] == 2025
+        )
+        
+        lhs = capacity_addition.where(mask_2025)
+        rhs = 0
+        
+        constraints = lhs == rhs
+        
+        self.constraints.add_constraint(
+            "constraint_no_investment_2025", constraints
         )
