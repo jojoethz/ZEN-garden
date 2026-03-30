@@ -2102,7 +2102,9 @@ class TechnologyRules(GenericRule):
         mask_2025 = (
             capacity_addition.coords["set_time_steps_yearly"] == first_year 
         )
-
+        print("DEBUG first_year:")
+        print(first_year)
+        
         mask_full = mask_2025.broadcast_like(capacity_addition)
 
         # first year only
