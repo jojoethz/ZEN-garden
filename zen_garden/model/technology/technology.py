@@ -2097,18 +2097,21 @@ class TechnologyRules(GenericRule):
         print("DEBUG years:")
         print(capacity_addition.coords["set_time_steps_yearly"].values)
 
+        first_year = capacity_addition.coords["set_time_steps_yearly"].values[0]
+
         mask_2025 = (
-            capacity_addition.coords["set_time_steps_yearly"] == 2025
+            capacity_addition.coords["set_time_steps_yearly"] == first_year 
         )
 
-        print("DEBUG mask_2025:")
-        print(mask_2025)
+        mask_full = mask_2025.broadcast_like(capacity_addition)
 
-        lhs = self.align_and_mask(capacity_addition, mask_2025)
-        rhs = 0
+        # first year only
+        lhs = capacity_addition.where(mask_full, 0)
 
-        constraints = lhs == rhs
+        # Constraint
+        constraints = lhs == 0
 
         self.constraints.add_constraint(
-            "constraint_no_investment_2025", constraints
+            "constraint_no_investment_2025",
+            constraints
         )
