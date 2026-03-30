@@ -2104,11 +2104,8 @@ class TechnologyRules(GenericRule):
         )
         print("DEBUG first_year:")
         print(first_year)
-        
-        mask_full = mask_2025.broadcast_like(capacity_addition)
 
-        # first year only
-        lhs = capacity_addition.where(mask_full, 0)
+        lhs = self.align_and_mask(capacity_addition, mask_2025)
 
         # Constraint
         constraints = lhs == 0
