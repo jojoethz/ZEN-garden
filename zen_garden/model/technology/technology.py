@@ -2091,19 +2091,11 @@ class TechnologyRules(GenericRule):
     def constraint_no_investment_2025(self):
         capacity_addition = self.variables["capacity_addition"]
 
-        print("DEBUG capacity_addition:")
-        print(capacity_addition)
-
-        print("DEBUG years:")
-        print(capacity_addition.coords["set_time_steps_yearly"].values)
-
         first_year = capacity_addition.coords["set_time_steps_yearly"].values[0]
 
         mask_2025 = (
             capacity_addition.coords["set_time_steps_yearly"] == first_year 
         )
-        print("DEBUG first_year:")
-        print(first_year)
 
         lhs = self.align_and_mask(capacity_addition, mask_2025)
 
