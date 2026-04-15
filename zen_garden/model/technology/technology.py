@@ -1076,8 +1076,8 @@ class Technology(Element):
         n_cons = len(model.constraints.items())
         rules.constraint_technology_on_off()
 
-        #added for comparison to limit investments in 2025
-        rules.constraint_no_investment_2025()   
+        #can be used for comparison to limit investments in 2025
+        #rules.constraint_no_investment_2025()   
 
         # if nothing was added we can remove the tech vars again
         if len(model.constraints.items()) == n_cons:
