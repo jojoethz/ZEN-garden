@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+DAC,2025,0.0
+DAC,2030,inf
+DAC,2035,inf
+DAC,2040,inf
+DAC,2045,inf
+DAC,2050,inf

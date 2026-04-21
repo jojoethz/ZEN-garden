@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+methanol_pipeline,2025,0.0
+methanol_pipeline,2030,inf
+methanol_pipeline,2035,inf
+methanol_pipeline,2040,inf
+methanol_pipeline,2045,inf
+methanol_pipeline,2050,inf

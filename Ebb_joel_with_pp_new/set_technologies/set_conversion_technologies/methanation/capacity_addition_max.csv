@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+methanation,2025,0.0
+methanation,2030,inf
+methanation,2035,inf
+methanation,2040,inf
+methanation,2045,inf
+methanation,2050,inf

@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+power_line,2025,0.0
+power_line,2030,inf
+power_line,2035,inf
+power_line,2040,inf
+power_line,2045,inf
+power_line,2050,inf

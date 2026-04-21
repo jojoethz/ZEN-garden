@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+hydrogen_FC_ship,2025,0.0
+hydrogen_FC_ship,2030,inf
+hydrogen_FC_ship,2035,inf
+hydrogen_FC_ship,2040,inf
+hydrogen_FC_ship,2045,inf
+hydrogen_FC_ship,2050,inf

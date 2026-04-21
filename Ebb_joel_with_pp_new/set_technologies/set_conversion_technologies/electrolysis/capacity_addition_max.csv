@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+electrolysis,2025,0.0
+electrolysis,2030,inf
+electrolysis,2035,inf
+electrolysis,2040,inf
+electrolysis,2045,inf
+electrolysis,2050,inf

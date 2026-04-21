@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+district_heating_grid,2025,0.0
+district_heating_grid,2030,inf
+district_heating_grid,2035,inf
+district_heating_grid,2040,inf
+district_heating_grid,2045,inf
+district_heating_grid,2050,inf

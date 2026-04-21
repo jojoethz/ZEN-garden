@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+waste_boiler_DH,2025,0.0
+waste_boiler_DH,2030,inf
+waste_boiler_DH,2035,inf
+waste_boiler_DH,2040,inf
+waste_boiler_DH,2045,inf
+waste_boiler_DH,2050,inf

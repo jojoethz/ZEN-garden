@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+PHEV electric part,2025,0.0
+PHEV electric part,2030,inf
+PHEV electric part,2035,inf
+PHEV electric part,2040,inf
+PHEV electric part,2045,inf
+PHEV electric part,2050,inf

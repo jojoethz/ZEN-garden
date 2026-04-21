@@ -1,7 +1,7 @@
-year,value
-2025,0.0
-2030,inf
-2035,inf
-2040,inf
-2045,inf
-2050,inf
+technology,year,value
+carbon_storage,2025,0.0
+carbon_storage,2030,inf
+carbon_storage,2035,inf
+carbon_storage,2040,inf
+carbon_storage,2045,inf
+carbon_storage,2050,inf
