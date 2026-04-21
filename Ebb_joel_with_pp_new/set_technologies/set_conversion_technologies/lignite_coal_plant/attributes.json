@@ -52,7 +52,7 @@
         "unit": "1"
     },
     "lifetime": {
-        "default_value": 46.0,
+        "default_value": 56.0,
         "unit": "1"
     },
     "reference_carrier": {
