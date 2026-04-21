@@ -1,7 +1,7 @@
-technology,year,value
-olefin_from_naphtha,2025,0.0
-olefin_from_naphtha,2030,inf
-olefin_from_naphtha,2035,inf
-olefin_from_naphtha,2040,inf
-olefin_from_naphtha,2045,inf
-olefin_from_naphtha,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

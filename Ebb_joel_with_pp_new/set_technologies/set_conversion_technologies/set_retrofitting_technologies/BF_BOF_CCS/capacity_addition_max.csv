@@ -1,7 +1,7 @@
-technology,year,value
-BF_BOF_CCS,2025,0.0
-BF_BOF_CCS,2030,inf
-BF_BOF_CCS,2035,inf
-BF_BOF_CCS,2040,inf
-BF_BOF_CCS,2045,inf
-BF_BOF_CCS,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

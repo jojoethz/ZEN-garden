@@ -1,7 +1,7 @@
-technology,year,value
-gasoline_ICE,2025,0.0
-gasoline_ICE,2030,inf
-gasoline_ICE,2035,inf
-gasoline_ICE,2040,inf
-gasoline_ICE,2045,inf
-gasoline_ICE,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

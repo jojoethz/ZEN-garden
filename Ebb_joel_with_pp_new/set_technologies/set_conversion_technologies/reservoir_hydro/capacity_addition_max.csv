@@ -1,7 +1,7 @@
-technology,year,value
-reservoir_hydro,2025,0.0
-reservoir_hydro,2030,inf
-reservoir_hydro,2035,inf
-reservoir_hydro,2040,inf
-reservoir_hydro,2045,inf
-reservoir_hydro,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

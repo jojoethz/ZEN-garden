@@ -1,7 +1,7 @@
-technology,year,value
-biomass_boiler,2025,0.0
-biomass_boiler,2030,inf
-biomass_boiler,2035,inf
-biomass_boiler,2040,inf
-biomass_boiler,2045,inf
-biomass_boiler,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

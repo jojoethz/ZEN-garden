@@ -1,7 +1,7 @@
-technology,year,value
-diesel_ICE_ship,2025,0.0
-diesel_ICE_ship,2030,inf
-diesel_ICE_ship,2035,inf
-diesel_ICE_ship,2040,inf
-diesel_ICE_ship,2045,inf
-diesel_ICE_ship,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

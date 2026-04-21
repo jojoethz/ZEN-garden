@@ -1,7 +1,7 @@
-technology,year,value
-biomethane_conversion,2025,0.0
-biomethane_conversion,2030,inf
-biomethane_conversion,2035,inf
-biomethane_conversion,2040,inf
-biomethane_conversion,2045,inf
-biomethane_conversion,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf

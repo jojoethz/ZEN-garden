@@ -1,7 +1,7 @@
-technology,year,value
-methanol_from_natural_gas,2025,0.0
-methanol_from_natural_gas,2030,inf
-methanol_from_natural_gas,2035,inf
-methanol_from_natural_gas,2040,inf
-methanol_from_natural_gas,2045,inf
-methanol_from_natural_gas,2050,inf
+year,value
+2025,0.0
+2030,inf
+2035,inf
+2040,inf
+2045,inf
+2050,inf
