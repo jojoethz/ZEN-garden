@@ -21,7 +21,7 @@
     },
     "capacity_lower_limit": {
         "default_value": NaN,
-        "unit": "MW"
+        "unit": "GW"
     },
     "min_load": {
         "default_value": 0.0,
