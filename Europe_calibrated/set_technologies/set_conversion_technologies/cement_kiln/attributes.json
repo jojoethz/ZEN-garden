@@ -20,7 +20,7 @@
         "unit": "tonproduct/hour"
     },
     "capacity_lower_limit": {
-        "default_value": NaN,
+        "default_value": 0.0,
         "unit": "tonproduct/hour"
     },
     "min_load": {

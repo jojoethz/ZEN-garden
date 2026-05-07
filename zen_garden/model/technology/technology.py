@@ -1325,7 +1325,7 @@ class TechnologyRules(GenericRule):
         capacity_lower_limit = self.parameters.capacity_lower_limit
         
         # Create a mask so we only build constraints where the user actually provided a number
-        mask = capacity_lower_limit.notnull()
+        mask = capacity_lower_limit > 0.0
         
         # Apply the mask using xarray's .where() so we don't build empty/NaN constraints
         lhs = capacity.where(mask)
