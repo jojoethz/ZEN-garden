@@ -550,6 +550,9 @@ class EnergySystem:
         # costs
         self.rules.constraint_cost_total()
 
+        # Total costs:
+        self.rules.constraint_global_cost_budget()
+
         # disable carbon emissions budget overshoot
         self.rules.constraint_carbon_emissions_budget_overshoot()
 
@@ -904,3 +907,26 @@ class EnergySystemRules(GenericRule):
             .at[sets["set_time_steps_yearly"][-1]]
             .to_linexpr()
         )
+    
+    def constraint_global_cost_budget(self):
+        """Limits the total system cost to a predefined budget."""
+        
+        # Only apply this if we are optimizing for carbon
+        if self.optimization_setup.analysis.objective == "total_carbon_emissions":
+            # 1. Get the expression for total cost (NPC)
+            # This calls the same logic used when 'total_cost' is the objective
+            total_cost_expr = self.objective_total_cost(self.optimization_setup.model)
+            
+            # 2. Define your limit from the previous run
+            target_cost = 1.07043249e+07 
+            epsilon = 0.001 # 0.1% slack
+            
+            # 3. Add the constraint
+            lhs = total_cost_expr
+            rhs = target_cost * (1 + epsilon)
+            
+            self.optimization_setup.model.add_constraints(
+                lhs <= rhs, 
+                name="constraint_global_cost_budget"
+            )
+            logging.info(f"Added global cost budget constraint: {target_cost}")

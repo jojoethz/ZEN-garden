@@ -1,0 +1,504 @@
+Running ZEN-garden version: 2.9.7
+Optimizing for dataset Europe_calibrated
+The output folder '/cluster/home/jlauper/ZEN-garden/outputs/Europe_calibrated' already exists
+Existing files will be overwritten!
+
+--- Add elements to model--- 
+
+
+--- Read input data of elements --- 
+
+Create ConversionTechnology BEV
+Create ConversionTechnology BF_BOF
+Create ConversionTechnology CNG
+Create ConversionTechnology DAC
+Create ConversionTechnology Diesel
+Create ConversionTechnology EAF
+Create ConversionTechnology FCEV
+Create ConversionTechnology GHEV
+Create ConversionTechnology H2_DRI
+Create ConversionTechnology LPG
+Create ConversionTechnology NG_DRI
+Create ConversionTechnology PHEV electric part
+Create ConversionTechnology PHEV gasoline part
+Create ConversionTechnology SMR
+Create ConversionTechnology ammonia_ICE_ship
+Create ConversionTechnology anaerobic_digestion
+Create ConversionTechnology biomass_boiler
+Create ConversionTechnology biomass_boiler_DH
+Create ConversionTechnology biomass_plant
+Create ConversionTechnology biomass_to_cement_fuel
+Create ConversionTechnology biomethane_conversion
+Create ConversionTechnology carbon_storage
+Create ConversionTechnology cement_kiln
+Create ConversionTechnology coal_to_cement_fuel
+Create ConversionTechnology diesel_ICE_ship
+Create ConversionTechnology district_heating_grid
+Create ConversionTechnology electrode_boiler
+Create ConversionTechnology electrode_boiler_DH
+Create ConversionTechnology electrolysis
+Create ConversionTechnology fischer_tropsch
+Create ConversionTechnology fuel_cell
+Create ConversionTechnology gasification
+Create ConversionTechnology gasoline_ICE
+Create ConversionTechnology haber_bosch
+Create ConversionTechnology hard_coal_boiler_DH
+Create ConversionTechnology hard_coal_plant
+Create ConversionTechnology heat_pump
+Create ConversionTechnology heat_pump_DH
+Create ConversionTechnology hydrogen_FC_ship
+Create ConversionTechnology hydrogen_to_cement_fuel
+Create ConversionTechnology industrial_gas_consumer
+Create ConversionTechnology lignite_coal_plant
+Create ConversionTechnology lng_terminal
+Create ConversionTechnology methanation
+Create ConversionTechnology methanol_ICE_ship
+Create ConversionTechnology methanol_from_biomass
+Create ConversionTechnology methanol_from_hydrogen
+Create ConversionTechnology methanol_from_natural_gas
+Create ConversionTechnology natural_gas_boiler
+Create ConversionTechnology natural_gas_boiler_DH
+Create ConversionTechnology natural_gas_turbine
+Create ConversionTechnology nuclear
+Create ConversionTechnology oil_boiler
+Create ConversionTechnology oil_boiler_DH
+Create ConversionTechnology oil_plant
+Create ConversionTechnology oil_to_diesel_conversion
+Create ConversionTechnology oil_to_gasoline_conversion
+Create ConversionTechnology oil_to_kerosene_conversion
+Create ConversionTechnology oil_to_naphtha_conversion
+Create ConversionTechnology olefin_from_methanol
+Create ConversionTechnology olefin_from_naphtha
+Create ConversionTechnology photovoltaics
+Create ConversionTechnology pyrolysis
+Create ConversionTechnology refining
+Create ConversionTechnology reservoir_hydro
+Create ConversionTechnology run-of-river_hydro
+Create ConversionTechnology waste_boiler_DH
+Create ConversionTechnology waste_plant
+Create ConversionTechnology waste_to_cement_fuel
+Create ConversionTechnology wind_offshore
+Create ConversionTechnology wind_onshore
+Create StorageTechnology battery
+Create StorageTechnology natural_gas_storage
+Create StorageTechnology oil_storage
+Create StorageTechnology pumped_hydro
+Create StorageTechnology salt_cavern_storage
+Create TransportTechnology ammonia_pipeline
+Create TransportTechnology carbon_pipeline
+Create TransportTechnology hydrogen_pipeline
+Create TransportTechnology methanol_pipeline
+Create TransportTechnology natural_gas_pipeline
+Create TransportTechnology oil_pipeline
+Create TransportTechnology olefin_pipeline
+Create TransportTechnology power_line
+Create RetrofittingTechnology BF_BOF_CCS
+Create RetrofittingTechnology NG_DRI_CCS
+Create RetrofittingTechnology SMR_CCS
+Create RetrofittingTechnology biomass_plant_CCS
+Create RetrofittingTechnology cement_post_comb
+Create RetrofittingTechnology natural_gas_turbine_CCS
+Create Carrier ammonia
+Create Carrier bev_electricity
+Create Carrier biomass
+Create Carrier biomethane
+Create Carrier carbon
+Create Carrier clinker
+Create Carrier cng_natural_gas
+Create Carrier crude_oil
+Create Carrier diesel
+Create Carrier diesel_ICE_diesel
+Create Carrier district_heat
+Create Carrier electricity
+Create Carrier fcev_hydrogen
+Create Carrier fuel_for_cement
+Create Carrier gasoline
+Create Carrier gasoline_ICE_gasoline
+Create Carrier ghev_gasoline
+Create Carrier hard_coal
+Create Carrier heat
+Create Carrier hydrogen
+Create Carrier kerosene
+Create Carrier lignite
+Create Carrier lng
+Create Carrier lpg_lpg
+Create Carrier methanol
+Create Carrier naphtha
+Create Carrier natural_gas
+Create Carrier natural_gas_industry
+Create Carrier oil
+Create Carrier olefin
+Create Carrier phev_electricity
+Create Carrier phev_gasoline
+Create Carrier primary_steel
+Create Carrier secondary_steel
+Create Carrier shipping
+Create Carrier uranium
+Create Carrier waste
+Create Carrier wet_biomass
+Parameter unit consistency is fulfilled!
+
+--- Time series aggregation ---
+Repeat the time series sequences for all years
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:422: PerformanceWarning: indexing past lexsort depth may impact performance.
+  year_raw_ts.unstack(header_set_time_steps)[element, ts],
+
+/cluster/home/jlauper/ZEN-garden/zen_garden/preprocess/time_series_aggregation.py:425: PerformanceWarning: indexing past lexsort depth may impact performance.
+  unstacked[element, ts] = ts_adjusted
+
+Calculate operational time steps for storage levels
+
+--- Conduct optimization for perfect foresight --- 
+
+
+--- Construct model components ---
+
+Construct Sets
+Time to construct Sets: 0.1 seconds
+Memory usage: 3158.0 MB
+Construct Params
+Time to construct Params: 22.1 seconds
+Memory usage: 4251.3 MB
+Construct Vars
+Time to construct Vars: 74.4 seconds
+Memory usage: 5737.8 MB
+Construct Constraints
+Construct Constraints of EnergySystem
+Construct Constraints of Carrier
+Construct Constraints of Technology
+Construct Constraints of ConversionTechnology
+Construct Constraints of StorageTechnology
+Construct Constraints of TransportTechnology
+Time to construct Constraints: 86.3 seconds
+Memory usage: 30766.4 MB
+Construct pe.Objective
+Total time to construct model components: 183.0 seconds
+
+--- Start Scaling ---
+
+
+--- Numerics at iteration 0 ---
+
+Max value of A matrix: -31625.820071620034 capacity_approximation[DAC,AT,0] in constraint_linear_capex[DAC,AT,0]
+Min value of A matrix: 6.59627432429945e-06 capacity[photovoltaics,power,FR,0] in constraint_capacity_factor_conversion[42,photovoltaics,FR]
+Max value of RHS: 233615.7409055257 in constraint_technology_lifetime[natural_gas_storage,energy,DE,0]
+Min value of RHS: 4.9146338109846566e-11 in constraint_limit_shed_demand[cng_natural_gas,IE,250]
+Numerical Range:
+LHS : ['6.6e-06', '3.2e+04']
+RHS : ['4.9e-11', '2.3e+05']
+
+--- Numerics at iteration 1 ---
+
+Max value of A matrix: 512.0 flow_conversion_output[CNG,cng_natural_gas,IE,250] in constraint_nodal_energy_balance[cng_natural_gas,IE,250]
+Min value of A matrix: -0.0027560240783236407 flow_conversion_output[photovoltaics,electricity,FR,42] in constraint_opex_technology_conversion[photovoltaics,FR,42]
+Max value of RHS: 528.7937794637716 in constraint_cost_capex_yearly[nuclear,power,FR,0]
+Min value of RHS: 6.441708828733809e-06 in constraint_limit_shed_demand[cng_natural_gas,IE,250]
+Numerical Range:
+LHS : ['2.8e-03', '5.1e+02']
+RHS : ['6.4e-06', '5.3e+02']
+Numerical Range Improvement:
+LHS : -4.0
+RHS : -8.0
+
+--- Numerics at iteration 2 ---
+
+Max value of A matrix: 512.0 flow_conversion_output[CNG,cng_natural_gas,IE,250] in constraint_nodal_energy_balance[cng_natural_gas,IE,250]
+Min value of A matrix: 0.00390625 flow_conversion_output[CNG,cng_natural_gas,IE,250] in constraint_carrier_conversion[CNG,cng_natural_gas,IE,250]
+Max value of RHS: 132.1984448659429 in constraint_cost_capex_yearly[nuclear,power,FR,0]
+Min value of RHS: 0.00010306734125974095 in constraint_nodal_energy_balance[cng_natural_gas,IE,250]
+Numerical Range:
+LHS : ['3.9e-03', '5.1e+02']
+RHS : ['1.0e-04', '1.3e+02']
+Numerical Range Improvement:
+LHS : 0.0
+RHS : -1.0
+
+--- Numerics at iteration 3 ---
+
+Max value of A matrix: 256.0 flow_conversion_output[CNG,cng_natural_gas,IE,250] in constraint_nodal_energy_balance[cng_natural_gas,IE,250]
+Min value of A matrix: 0.00390625 flow_conversion_output[CNG,cng_natural_gas,IE,250] in constraint_carrier_conversion[CNG,cng_natural_gas,IE,250]
+Max value of RHS: 57.03509299451311 in constraint_technology_lifetime[natural_gas_storage,energy,DE,0]
+Min value of RHS: 0.0004122693650389638 in constraint_nodal_energy_balance[cng_natural_gas,IE,250]
+Numerical Range:
+LHS : ['3.9e-03', '2.6e+02']
+RHS : ['4.1e-04', '5.7e+01']
+Numerical Range Improvement:
+LHS : -1.0
+RHS : -1.0
+
+Time to Scale Problem: 68.3 seconds
+
+
+--- Solve model instance using gurobi ---
+
+Writing constraints.:   0%|[38;2;128;191;255m          [0m| 0/53 [00:00<?, ?it/s]Writing constraints.:   9%|[38;2;128;191;255m▉         [0m| 5/53 [00:00<00:00, 48.99it/s]Writing constraints.:  19%|[38;2;128;191;255m█▉        [0m| 10/53 [00:00<00:01, 30.93it/s]Writing constraints.:  26%|[38;2;128;191;255m██▋       [0m| 14/53 [00:00<00:02, 18.10it/s]Writing constraints.:  32%|[38;2;128;191;255m███▏      [0m| 17/53 [00:00<00:02, 13.87it/s]Writing constraints.:  36%|[38;2;128;191;255m███▌      [0m| 19/53 [00:04<00:13,  2.46it/s]Writing constraints.:  45%|[38;2;128;191;255m████▌     [0m| 24/53 [00:04<00:06,  4.23it/s]Writing constraints.:  51%|[38;2;128;191;255m█████     [0m| 27/53 [00:04<00:04,  5.45it/s]Writing constraints.:  57%|[38;2;128;191;255m█████▋    [0m| 30/53 [00:05<00:05,  4.46it/s]Writing constraints.:  60%|[38;2;128;191;255m██████    [0m| 32/53 [00:05<00:04,  4.32it/s]Writing constraints.:  60%|[38;2;128;191;255m██████    [0m| 32/53 [00:19<00:04,  4.32it/s]Writing constraints.:  64%|[38;2;128;191;255m██████▍   [0m| 34/53 [00:25<00:46,  2.44s/it]Writing constraints.:  72%|[38;2;128;191;255m███████▏  [0m| 38/53 [00:25<00:22,  1.48s/it]Writing constraints.:  75%|[38;2;128;191;255m███████▌  [0m| 40/53 [00:25<00:15,  1.17s/it]Writing constraints.:  81%|[38;2;128;191;255m████████  [0m| 43/53 [00:26<00:09,  1.11it/s]Writing constraints.:  85%|[38;2;128;191;255m████████▍ [0m| 45/53 [00:28<00:07,  1.14it/s]Writing constraints.:  92%|[38;2;128;191;255m█████████▏[0m| 49/53 [00:28<00:02,  1.84it/s]Writing constraints.:  96%|[38;2;128;191;255m█████████▌[0m| 51/53 [00:28<00:00,  2.25it/s]Writing constraints.: 100%|[38;2;128;191;255m██████████[0m| 53/53 [00:28<00:00,  2.83it/s]Writing constraints.: 100%|[38;2;128;191;255m██████████[0m| 53/53 [00:28<00:00,  1.84it/s]
+Writing continuous variables.:   0%|[38;2;128;191;255m          [0m| 0/37 [00:00<?, ?it/s]Writing continuous variables.:  27%|[38;2;128;191;255m██▋       [0m| 10/37 [00:00<00:00, 71.56it/s]Writing continuous variables.:  49%|[38;2;128;191;255m████▊     [0m| 18/37 [00:00<00:00, 58.23it/s]Writing continuous variables.:  65%|[38;2;128;191;255m██████▍   [0m| 24/37 [00:00<00:00, 46.26it/s]Writing continuous variables.:  78%|[38;2;128;191;255m███████▊  [0m| 29/37 [00:01<00:00, 14.50it/s]Writing continuous variables.:  92%|[38;2;128;191;255m█████████▏[0m| 34/37 [00:01<00:00, 16.65it/s]Writing continuous variables.: 100%|[38;2;128;191;255m██████████[0m| 37/37 [00:01<00:00, 22.35it/s]
+Set parameter TokenServer to value "lic-gurobi.ethz.ch"
+Warning: unknown variable 'x12' in bounds section (line 48821790)
+Warning: unknown variable 'x13' in bounds section (line 48821791)
+Warning: unknown variable 'x14' in bounds section (line 48821792)
+Warning: unknown variable 'x15' in bounds section (line 48821793)
+Warning: unknown variable 'x16' in bounds section (line 48821794)
+Read LP format model from file /cluster/home/jlauper/ZEN-garden/outputs/solver_files/linopy-problem-afve6yzt.lp
+Reading time = 22.93 seconds
+obj: 10119714 rows, 8051496 columns, 28561956 nonzeros
+Set parameter Method to value 2
+Set parameter NodeMethod to value 2
+Set parameter BarHomogeneous to value 1
+Set parameter DualReductions to value 0
+Set parameter Threads to value 128
+Set parameter Crossover to value 0
+Set parameter ScaleFlag to value 2
+Set parameter BarOrder to value 0
+Set parameter BarConvTol to value 1e-06
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (linux64 - "Ubuntu 22.04.5 LTS")
+
+CPU model: AMD EPYC 7742 64-Core Processor, instruction set [SSE2|AVX|AVX2]
+Thread count: 128 physical cores, 128 logical processors, using up to 128 threads
+
+Non-default parameters:
+Method  2
+ScaleFlag  2
+BarConvTol  1e-06
+BarHomogeneous  1
+BarOrder  0
+Crossover  0
+NodeMethod  2
+DualReductions  0
+Threads  128
+
+Optimize a model with 10119714 rows, 8051496 columns and 28561956 nonzeros
+Model fingerprint: 0x4e1038de
+Coefficient statistics:
+  Matrix range     [4e-03, 3e+02]
+  Objective range  [5e-01, 4e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [4e-04, 6e+01]
+Presolve removed 6213971 rows and 5488583 columns (presolve time = 5s)...
+Presolve removed 6213974 rows and 5488586 columns (presolve time = 10s)...
+Presolve removed 6276656 rows and 5488611 columns
+Presolve time: 12.90s
+Presolved: 3843058 rows, 2562885 columns, 12755153 nonzeros
+Elapsed ordering time = 5s
+Elapsed ordering time = 10s
+Elapsed ordering time = 15s
+Ordering time: 18.44s
+
+Barrier statistics:
+ Dense cols : 585
+ AA' NZ     : 8.122e+07
+ Factor NZ  : 1.211e+09 (roughly 12.0 GB of memory)
+ Factor Ops : 5.450e+12 (roughly 6 seconds per iteration)
+ Threads    : 128
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.60672788e+13 -2.10403372e+15  1.51e+07 1.93e+05  3.24e+09    54s
+   1   1.32341976e+13 -1.58887546e+15  1.21e+07 3.51e+05  2.31e+09    64s
+   2   1.22914496e+13 -1.00702406e+15  1.12e+07 1.91e+05  1.49e+09    75s
+   3   8.88769615e+12 -9.19727984e+14  8.03e+06 1.70e+05  1.22e+09    91s
+   4   6.52982422e+12 -8.58329558e+14  5.88e+06 1.58e+05  1.04e+09   115s
+   5   4.21429286e+12 -5.30670132e+14  3.85e+06 9.77e+04  6.06e+08   140s
+   6   3.37192657e+12 -4.83109087e+14  3.11e+06 8.88e+04  5.32e+08   168s
+   7   2.33281533e+12 -4.10830280e+14  2.19e+06 7.55e+04  4.39e+08   195s
+   8   1.45270590e+12 -6.87116296e+13  1.37e+06 1.26e+04  1.04e+08   223s
+   9   2.69791014e+11 -9.41137743e+12  2.19e+05 1.73e+03  1.23e+07   251s
+  10   9.62184235e+10 -6.76031828e+12  4.93e+04 1.25e+03  5.47e+06   278s
+  11   5.51404808e+10 -1.13144349e+12  1.67e+04 2.14e+02  9.56e+05   304s
+  12   3.58797176e+10 -3.33900615e+11  7.60e+03 6.55e+01  2.76e+05   327s
+  13   2.62819750e+10 -1.57178739e+11  4.69e+03 3.14e+01  1.21e+05   351s
+  14   1.30585830e+10 -8.20935447e+10  1.92e+03 1.66e+01  4.80e+04   374s
+  15   8.92244967e+09 -3.19676091e+10  1.23e+03 6.62e+00  1.88e+04   398s
+  16   3.99987733e+09 -3.00921786e+10  5.41e+02 6.24e+00  1.33e+04   423s
+  17   3.16671821e+09 -1.11576292e+10  4.09e+02 2.40e+00  5.49e+03   445s
+  18   1.93970485e+09 -5.01764877e+09  2.47e+02 1.07e+00  2.44e+03   468s
+  19   1.77425130e+09 -3.67414222e+09  2.24e+02 7.83e-01  1.85e+03   493s
+  20   1.42415484e+09 -3.12849012e+09  1.80e+02 6.62e-01  1.50e+03   516s
+  21   1.23455588e+09 -2.56194169e+09  1.56e+02 5.36e-01  1.22e+03   538s
+  22   9.16474647e+08 -2.06414043e+09  1.15e+02 4.26e-01  9.31e+02   563s
+  23   6.81171629e+08 -1.56122124e+09  8.38e+01 3.15e-01  6.78e+02   589s
+  24   4.77414240e+08 -1.09603840e+09  5.57e+01 2.11e-01  4.60e+02   619s
+  25   3.17205523e+08 -7.55283559e+08  3.38e+01 1.45e-01  3.05e+02   648s
+  26   2.55699651e+08 -5.37860887e+08  2.59e+01 1.04e-01  2.20e+02   678s
+  27   2.01475291e+08 -3.62111013e+08  1.92e+01 7.11e-02  1.53e+02   709s
+  28   1.41901015e+08 -2.64468854e+08  1.23e+01 5.27e-02  1.09e+02   740s
+  29   1.02589347e+08 -1.73551120e+08  7.95e+00 3.57e-02  7.27e+01   770s
+  30   6.95999511e+07 -1.13663789e+08  4.76e+00 2.44e-02  4.77e+01   799s
+  31   5.04933507e+07 -8.04400406e+07  2.84e+00 1.81e-02  3.39e+01   828s
+  32   4.16588040e+07 -5.11777408e+07  2.05e+00 1.25e-02  2.37e+01   859s
+  33   3.30763420e+07 -2.87248750e+07  1.36e+00 8.17e-03  1.56e+01   886s
+  34   2.70430662e+07 -1.79681605e+07  9.00e-01 6.04e-03  1.13e+01   916s
+  35   2.32477581e+07 -6.80828593e+06  6.49e-01 3.79e-03  7.38e+00   944s
+  36   1.98039089e+07 -2.58535357e+06  4.49e-01 2.92e-03  5.49e+00   973s
+  37   1.74773490e+07  1.40151558e+06  3.12e-01 2.10e-03  3.91e+00  1003s
+  38   1.60762799e+07  4.07363782e+06  2.36e-01 1.53e-03  2.88e+00  1032s
+  39   1.46900883e+07  5.79596908e+06  1.59e-01 1.16e-03  2.12e+00  1061s
+  40   1.37720871e+07  6.98076431e+06  1.08e-01 8.96e-04  1.61e+00  1090s
+  41   1.31199452e+07  7.74198112e+06  7.54e-02 7.27e-04  1.27e+00  1120s
+  42   1.26845390e+07  8.56064607e+06  5.67e-02 5.40e-04  9.59e-01  1150s
+  43   1.22343593e+07  9.03312241e+06  3.87e-02 4.30e-04  7.39e-01  1180s
+  44   1.19213312e+07  9.53052888e+06  2.78e-02 3.12e-04  5.44e-01  1210s
+  45   1.17773402e+07  9.76586171e+06  2.45e-02 2.54e-04  4.52e-01  1239s
+  46   1.16033475e+07  9.96316552e+06  2.00e-02 2.04e-04  3.65e-01  1267s
+  47   1.14437622e+07  1.00459155e+07  1.60e-02 1.82e-04  3.10e-01  1296s
+  48   1.13019060e+07  1.02168281e+07  1.35e-02 1.37e-04  2.38e-01  1324s
+  49   1.11952074e+07  1.03226123e+07  1.09e-02 1.08e-04  1.89e-01  1353s
+  50   1.11220620e+07  1.04105994e+07  9.17e-03 8.47e-05  1.52e-01  1382s
+  51   1.10517022e+07  1.04653827e+07  7.56e-03 6.92e-05  1.24e-01  1411s
+  52   1.10051946e+07  1.05272757e+07  6.54e-03 5.14e-05  9.99e-02  1440s
+  53   1.09538681e+07  1.05602093e+07  5.68e-03 4.16e-05  8.16e-02  1469s
+  54   1.09069080e+07  1.05883632e+07  4.73e-03 3.33e-05  6.55e-02  1498s
+  55   1.08634349e+07  1.06119308e+07  3.88e-03 2.63e-05  5.14e-02  1527s
+  56   1.08289509e+07  1.06341400e+07  3.11e-03 1.98e-05  3.95e-02  1556s
+  57   1.08098467e+07  1.06441729e+07  2.69e-03 1.68e-05  3.35e-02  1586s
+  58   1.07908777e+07  1.06512789e+07  2.26e-03 1.48e-05  2.81e-02  1617s
+  59   1.07781794e+07  1.06605375e+07  1.96e-03 1.21e-05  2.36e-02  1647s
+  60   1.07668586e+07  1.06667574e+07  1.67e-03 1.03e-05  2.00e-02  1676s
+  61   1.07570487e+07  1.06701038e+07  1.44e-03 9.35e-06  1.74e-02  1706s
+  62   1.07493947e+07  1.06760773e+07  1.25e-03 7.63e-06  1.46e-02  1737s
+  63   1.07444168e+07  1.06804828e+07  1.13e-03 6.38e-06  1.27e-02  1768s
+  64   1.07394587e+07  1.06828104e+07  9.95e-04 5.73e-06  1.12e-02  1795s
+  65   1.07360275e+07  1.06858244e+07  9.04e-04 4.88e-06  9.92e-03  1823s
+  66   1.07317479e+07  1.06876948e+07  7.92e-04 4.37e-06  8.70e-03  1854s
+  67   1.07279778e+07  1.06895902e+07  6.98e-04 3.84e-06  7.57e-03  1883s
+  68   1.07260478e+07  1.06916024e+07  6.46e-04 3.28e-06  6.78e-03  1913s
+  69   1.07227451e+07  1.06928391e+07  5.53e-04 2.94e-06  5.88e-03  1941s
+  70   1.07221873e+07  1.06937119e+07  5.37e-04 2.70e-06  5.59e-03  1966s
+  71   1.07185998e+07  1.06947494e+07  4.39e-04 2.42e-06  4.68e-03  1994s
+  72   1.07170725e+07  1.06955983e+07  3.96e-04 2.20e-06  4.22e-03  2024s
+  73   1.07157373e+07  1.06973251e+07  3.58e-04 1.73e-06  3.61e-03  2053s
+  74   1.07138867e+07  1.06978358e+07  3.04e-04 1.60e-06  3.14e-03  2082s
+  75   1.07128775e+07  1.06987204e+07  2.74e-04 1.37e-06  2.77e-03  2111s
+  76   1.07113815e+07  1.06993742e+07  2.31e-04 1.20e-06  2.35e-03  2141s
+  77   1.07102067e+07  1.06999242e+07  1.95e-04 1.06e-06  2.01e-03  2173s
+  78   1.07098680e+07  1.07002196e+07  1.85e-04 9.86e-07  1.89e-03  2205s
+  79   1.07093942e+07  1.07007873e+07  1.70e-04 8.43e-07  1.68e-03  2235s
+  80   1.07087674e+07  1.07011261e+07  1.51e-04 7.57e-07  1.49e-03  2265s
+  81   1.07083070e+07  1.07016093e+07  1.37e-04 6.35e-07  1.31e-03  2295s
+  82   1.07077850e+07  1.07019104e+07  1.20e-04 5.60e-07  1.15e-03  2329s
+  83   1.07073283e+07  1.07022764e+07  1.05e-04 4.71e-07  9.85e-04  2361s
+  84   1.07068496e+07  1.07025069e+07  8.93e-05 4.14e-07  8.47e-04  2392s
+  85   1.07066017e+07  1.07026813e+07  8.16e-05 3.72e-07  7.64e-04  2426s
+  86   1.07062659e+07  1.07028129e+07  7.06e-05 3.40e-07  6.73e-04  2459s
+  87   1.07060518e+07  1.07029807e+07  6.33e-05 3.00e-07  5.99e-04  2496s
+  88   1.07059488e+07  1.07030258e+07  5.98e-05 2.90e-07  5.70e-04  2532s
+  89   1.07057046e+07  1.07031888e+07  5.13e-05 2.52e-07  4.91e-04  2569s
+  90   1.07055964e+07  1.07033220e+07  4.75e-05 2.21e-07  4.43e-04  2605s
+  91   1.07053578e+07  1.07034370e+07  3.89e-05 1.95e-07  3.75e-04  2643s
+  92   1.07053081e+07  1.07035007e+07  3.71e-05 1.80e-07  3.52e-04  2684s
+  93   1.07051403e+07  1.07036157e+07  3.10e-05 1.54e-07  2.97e-04  2721s
+  94   1.07050500e+07  1.07036834e+07  2.77e-05 1.39e-07  2.66e-04  2760s
+  95   1.07049635e+07  1.07037810e+07  2.46e-05 1.17e-07  2.30e-04  2796s
+  96   1.07048723e+07  1.07038504e+07  2.12e-05 1.01e-07  1.99e-04  2832s
+  97   1.07048512e+07  1.07038701e+07  2.04e-05 9.70e-08  1.91e-04  2866s
+  98   1.07047691e+07  1.07039014e+07  1.72e-05 9.01e-08  1.69e-04  2904s
+  99   1.07047251e+07  1.07039750e+07  1.56e-05 7.38e-08  1.46e-04  2943s
+ 100   1.07046832e+07  1.07040178e+07  1.40e-05 6.43e-08  1.30e-04  2987s
+ 101   1.07046683e+07  1.07040454e+07  1.35e-05 5.82e-08  1.21e-04  3030s
+ 102   1.07046245e+07  1.07040869e+07  1.19e-05 4.90e-08  1.05e-04  3069s
+ 103   1.07045815e+07  1.07041106e+07  1.02e-05 4.39e-08  9.16e-05  3114s
+ 104   1.07045511e+07  1.07041267e+07  9.09e-06 4.04e-08  8.26e-05  3160s
+ 105   1.07045218e+07  1.07041501e+07  7.94e-06 3.55e-08  7.24e-05  3206s
+ 106   1.07045018e+07  1.07041666e+07  7.17e-06 3.20e-08  6.53e-05  3248s
+ 107   1.07044902e+07  1.07041815e+07  6.73e-06 2.88e-08  6.01e-05  3302s
+ 108   1.07044653e+07  1.07041922e+07  5.78e-06 2.66e-08  5.32e-05  3357s
+ 109   1.07044524e+07  1.07041986e+07  5.26e-06 2.53e-08  4.95e-05  3404s
+ 110   1.07044408e+07  1.07042124e+07  4.81e-06 2.24e-08  4.45e-05  3461s
+ 111   1.07044325e+07  1.07042229e+07  4.48e-06 2.02e-08  4.08e-05  3511s
+ 112   1.07044129e+07  1.07042277e+07  3.69e-06 1.93e-08  3.61e-05  3565s
+ 113   1.07044053e+07  1.07042483e+07  3.38e-06 1.50e-08  3.06e-05  3618s
+ 114   1.07043945e+07  1.07042536e+07  2.94e-06 1.67e-08  2.74e-05  3675s
+ 115   1.07043902e+07  1.07042629e+07  2.76e-06 1.44e-08  2.48e-05  3731s
+ 116   1.07043832e+07  1.07042684e+07  2.47e-06 1.30e-08  2.24e-05  3782s
+ 117   1.07043801e+07  1.07042762e+07  2.35e-06 1.18e-08  2.02e-05  3844s
+ 118   1.07043751e+07  1.07042806e+07  2.15e-06 1.68e-08  1.84e-05  3906s
+ 119   1.07043683e+07  1.07042855e+07  1.86e-06 3.74e-08  1.61e-05  3958s
+ 120   1.07043634e+07  1.07042908e+07  1.66e-06 3.11e-08  1.41e-05  4027s
+ 121   1.07043580e+07  1.07042956e+07  1.44e-06 2.80e-08  1.21e-05  4096s
+ 122   1.07043545e+07  1.07042984e+07  1.29e-06 4.24e-08  1.09e-05  4161s
+ 123   1.07043526e+07  1.07043027e+07  1.22e-06 4.60e-08  9.69e-06  4233s
+ 124   1.07043476e+07  1.07043047e+07  1.02e-06 4.76e-08  8.34e-06  4293s
+ 125   1.07043448e+07  1.07043075e+07  8.96e-07 4.13e-08  7.26e-06  4360s
+ 126   1.07043417e+07  1.07043098e+07  7.63e-07 3.17e-08  6.20e-06  4427s
+ 127   1.07043400e+07  1.07043102e+07  6.89e-07 2.52e-08  5.79e-06  4489s
+ 128   1.07043383e+07  1.07043120e+07  5.93e-07 2.56e-08  5.11e-06  4530s
+ 129   1.07043368e+07  1.07043133e+07  5.30e-07 1.95e-08  4.58e-06  4599s
+ 130   1.07043362e+07  1.07043138e+07  5.06e-07 4.64e-08  4.36e-06  4640s
+ 131   1.07043350e+07  1.07043147e+07  1.12e-06 1.09e-07  3.95e-06  4683s
+ 132   1.07043337e+07  1.07043157e+07  9.78e-07 9.87e-08  3.51e-06  4730s
+ 133   1.07043334e+07  1.07043160e+07  9.67e-07 9.52e-08  3.39e-06  4764s
+ 134   1.07043332e+07  1.07043162e+07  9.46e-07 9.28e-08  3.32e-06  4801s
+ 135   1.07043326e+07  1.07043166e+07  2.84e-06 8.83e-08  3.13e-06  4837s
+ 136   1.07043318e+07  1.07043171e+07  2.55e-06 8.00e-08  2.87e-06  4875s
+ 137   1.07043312e+07  1.07043176e+07  2.34e-06 7.91e-08  2.66e-06  4926s
+ 138   1.07043305e+07  1.07043186e+07  2.09e-06 6.60e-08  2.32e-06  4973s
+ 139   1.07043301e+07  1.07043189e+07  1.91e-06 5.21e-08  2.18e-06  5011s
+ 140   1.07043294e+07  1.07043193e+07  1.69e-06 4.85e-08  1.97e-06  5048s
+ 141   1.07043290e+07  1.07043199e+07  3.45e-06 4.19e-08  1.79e-06  5084s
+ 142   1.07043284e+07  1.07043205e+07  3.56e-06 3.36e-08  1.54e-06  5126s
+ 143   1.07043281e+07  1.07043210e+07  3.33e-06 2.99e-08  1.40e-06  5164s
+ 144   1.07043278e+07  1.07043215e+07  3.04e-06 2.59e-08  1.25e-06  5206s
+ 145   1.07043277e+07  1.07043220e+07  2.84e-06 2.12e-08  1.11e-06  5242s
+ 146   1.07043274e+07  1.07043222e+07  1.61e-05 1.94e-08  1.02e-06  5279s
+ 147   1.07043271e+07  1.07043226e+07  1.89e-05 1.86e-08  8.85e-07  5316s
+ 148   1.07043268e+07  1.07043228e+07  1.53e-05 1.62e-08  7.89e-07  5350s
+ 149   1.07043265e+07  1.07043230e+07  8.20e-06 2.11e-08  7.01e-07  5393s
+ 150   1.07043263e+07  1.07043232e+07  7.42e-06 1.96e-08  6.19e-07  5427s
+ 151   1.07043262e+07  1.07043233e+07  7.17e-06 1.75e-08  5.78e-07  5465s
+ 152   1.07043261e+07  1.07043235e+07  5.82e-06 1.53e-08  5.22e-07  5502s
+ 153   1.07043260e+07  1.07043236e+07  4.53e-06 1.35e-08  4.69e-07  5540s
+ 154   1.07043258e+07  1.07043237e+07  3.25e-06 1.24e-08  4.23e-07  5577s
+ 155   1.07043257e+07  1.07043239e+07  5.61e-06 2.54e-08  3.63e-07  5616s
+ 156   1.07043257e+07  1.07043239e+07  5.42e-06 2.40e-08  3.49e-07  5651s
+ 157   1.07043256e+07  1.07043240e+07  4.93e-06 2.53e-08  3.21e-07  5684s
+ 158   1.07043255e+07  1.07043241e+07  4.44e-06 2.15e-08  2.82e-07  5722s
+ 159   1.07043254e+07  1.07043241e+07  6.57e-06 1.95e-08  2.49e-07  5754s
+ 160   1.07043253e+07  1.07043242e+07  5.07e-06 2.76e-08  2.17e-07  5796s
+ 161   1.07043252e+07  1.07043242e+07  4.42e-06 2.45e-08  1.91e-07  5833s
+ 162   1.07043251e+07  1.07043243e+07  3.81e-06 2.85e-08  1.64e-07  5869s
+ 163   1.07043251e+07  1.07043243e+07  3.59e-06 4.13e-08  1.55e-07  5902s
+ 164   1.07043250e+07  1.07043244e+07  4.48e-06 2.92e-08  1.35e-07  5938s
+ 165   1.07043250e+07  1.07043244e+07  6.81e-06 2.69e-08  1.21e-07  5969s
+ 166   1.07043250e+07  1.07043244e+07  6.71e-06 2.52e-08  1.19e-07  5999s
+ 167   1.07043250e+07  1.07043244e+07  7.78e-06 2.75e-08  1.11e-07  6029s
+ 168   1.07043249e+07  1.07043244e+07  1.34e-05 2.45e-08  1.01e-07  6063s
+ 169   1.07043249e+07  1.07043244e+07  1.66e-05 2.40e-08  9.63e-08  6094s
+ 170   1.07043249e+07  1.07043245e+07  1.90e-05 2.19e-08  8.84e-08  6125s
+ 171   1.07043249e+07  1.07043245e+07  1.77e-05 2.00e-08  8.28e-08  6155s
+
+Barrier solved model in 171 iterations and 6155.45 seconds (4361.87 work units)
+Optimal objective 1.07043249e+07
+
+--- Postprocess results ---
+Reduced costs are not saved
+--- Optimization finished ---
