@@ -919,7 +919,7 @@ class EnergySystemRules(GenericRule):
             
             # 2. Define your limit from the previous run
             target_cost = 1.07043249e+07 
-            epsilon = 0.001 # 0.1% slack
+            epsilon = 0.00001 # 0.001% slack
             
             # 3. Add the constraint
             lhs = total_cost_expr
