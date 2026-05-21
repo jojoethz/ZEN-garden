@@ -12,7 +12,7 @@
     "unit": "GW"
   },
   "price_shed_demand": {
-    "default_value": 1000.0,
+    "default_value": "inf",
     "unit": "Euro/MWh"
   },
   "availability_import": {
