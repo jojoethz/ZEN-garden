@@ -918,7 +918,7 @@ class EnergySystemRules(GenericRule):
             total_cost_expr = self.objective_total_cost(self.optimization_setup.model)
             
             # 2. Define your limit from the previous run
-            target_cost = 9.32925002e+02 #for test_MEF
+            target_cost = 8.05497979e+04 #for test_MEF
             epsilon = 0.00001 # 0.001% slack
             
             # 3. Add the constraint
