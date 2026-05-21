@@ -5,8 +5,7 @@
         "photovoltaics"
     ],
     "set_storage_technologies": [
-        "natural_gas_storage",
-        "pumped_hydro"
+        "natural_gas_storage"
     ],
     "set_transport_technologies": [
         "natural_gas_pipeline"
@@ -18,7 +17,7 @@
     "reference_year": 2023,
     "unaggregated_time_steps_per_year": 8760,
     "aggregated_time_steps_per_year": 50,
-    "conduct_time_series_aggregation": true,
+    "conduct_time_series_aggregation": false,
     "optimized_years": 1,
     "interval_between_years": 1,
     "use_rolling_horizon": false,
