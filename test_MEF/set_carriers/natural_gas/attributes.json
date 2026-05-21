@@ -4,7 +4,7 @@
     "unit": "kilotons/GWh"
   },
   "carbon_intensity_carrier_export": {
-    "default_value": 0.2,
+    "default_value": 0.0,
     "unit": "kilotons/GWh"
   },
   "demand": {
