@@ -12,7 +12,11 @@
     "unit": "GW"
   },
   "capacity_limit": {
+<<<<<<< HEAD
     "default_value": "inf",
+=======
+    "default_value": "20.0",
+>>>>>>> updated_results
     "unit": "GW"
   },
   "capacity_lower_limit": {

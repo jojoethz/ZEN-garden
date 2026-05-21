@@ -1,6 +1,10 @@
 {
     "set_conversion_technologies": [
         "natural_gas_boiler",
+<<<<<<< HEAD
+=======
+        "natural_gas_turbine",
+>>>>>>> updated_results
         "photovoltaics"
     ],
     "set_storage_technologies": [
