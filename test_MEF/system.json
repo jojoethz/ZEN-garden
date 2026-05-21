@@ -16,8 +16,8 @@
         "CH"
     ],
     "reference_year": 2023,
-    "unaggregated_time_steps_per_year": 96,
-    "aggregated_time_steps_per_year": 6,
+    "unaggregated_time_steps_per_year": 8760,
+    "aggregated_time_steps_per_year": 50,
     "conduct_time_series_aggregation": true,
     "optimized_years": 1,
     "interval_between_years": 1,
