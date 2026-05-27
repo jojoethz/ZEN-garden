@@ -16,7 +16,9 @@
       "Crossover": 0,
       "ScaleFlag": 2,
       "BarOrder": 0,
-      "BarConvTol": 1e-6
+      "BarConvTol": 1e-6,
+      "NumericFocus": 3,
+      "BarIterLimit": 1000
     },
     "save_duals": true,
     "use_scaling": true,
