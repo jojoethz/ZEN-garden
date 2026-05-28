@@ -1,10 +1,10 @@
 {
   "analysis": {
     "dataset": "Europe_calibrated",
+    "objective": "weighted_sum",
     "time_series_aggregation": {
       "solver": "gurobi"
-    },
-    "objective": "weighted_sum"
+    }
   },
   "solver": {
     "name": "gurobi",
