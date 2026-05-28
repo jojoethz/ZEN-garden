@@ -3,7 +3,8 @@
     "dataset": "Europe_calibrated",
     "time_series_aggregation": {
       "solver": "gurobi"
-    }
+    },
+    "objective": "weighted_sum"
   },
   "solver": {
     "name": "gurobi",
@@ -16,9 +17,7 @@
       "Crossover": 0,
       "ScaleFlag": 2,
       "BarOrder": 0,
-      "BarConvTol": 1e-6,
-      "NumericFocus": 3,
-      "BarIterLimit": 1000
+      "BarConvTol": 1e-6
     },
     "save_duals": true,
     "use_scaling": true,
