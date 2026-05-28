@@ -525,24 +525,25 @@ class EnergySystem:
 
     def construct_constraints(self):
         """Constructs the constraints of the class <EnergySystem>."""
+        #carbon emissions constraints removed for marginal emissions analysis
         logging.info("Construct Constraints of EnergySystem")
 
         # create the rules
         self.rules = EnergySystemRules(self.optimization_setup)
         # cumulative carbon emissions
-        self.rules.constraint_carbon_emissions_cumulative()
+        #self.rules.constraint_carbon_emissions_cumulative()
 
         # annual limit carbon emissions
-        self.rules.constraint_carbon_emissions_annual_limit()
+        #self.rules.constraint_carbon_emissions_annual_limit()
 
         # carbon emission budget limit
-        self.rules.constraint_carbon_emissions_budget()
+        #self.rules.constraint_carbon_emissions_budget()
 
         # net_present_cost
         self.rules.constraint_net_present_cost()
 
         # total carbon emissions
-        self.rules.constraint_carbon_emissions_annual()
+        #self.rules.constraint_carbon_emissions_annual()
 
         # cost of carbon emissions
         self.rules.constraint_cost_carbon_emissions_total()

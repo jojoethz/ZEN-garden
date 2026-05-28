@@ -1094,8 +1094,8 @@ class Technology(Element):
         # total opex of all technologies
         rules.constraint_cost_opex_yearly_total()
 
-        # total carbon emissions of technologies, removed for marginal emissions analysis
-        # rules.constraint_carbon_emissions_technology_total()
+        # total carbon emissions of technologies
+        rules.constraint_carbon_emissions_technology_total()
 
         # min load constraints
         n_cons = len(model.constraints.items())
