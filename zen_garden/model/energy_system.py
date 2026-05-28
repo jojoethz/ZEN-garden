@@ -531,7 +531,7 @@ class EnergySystem:
         # create the rules
         self.rules = EnergySystemRules(self.optimization_setup)
         # cumulative carbon emissions
-        #self.rules.constraint_carbon_emissions_cumulative()
+        self.rules.constraint_carbon_emissions_cumulative()
 
         # annual limit carbon emissions
         #self.rules.constraint_carbon_emissions_annual_limit()
@@ -543,7 +543,7 @@ class EnergySystem:
         self.rules.constraint_net_present_cost()
 
         # total carbon emissions
-        #self.rules.constraint_carbon_emissions_annual()
+        self.rules.constraint_carbon_emissions_annual()
 
         # cost of carbon emissions
         self.rules.constraint_cost_carbon_emissions_total()
