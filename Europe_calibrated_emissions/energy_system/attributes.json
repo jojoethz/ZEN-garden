@@ -1,6 +1,6 @@
 {
     "price_carbon_emissions_annual_overshoot": {
-        "default_value": 5000.0,
+        "default_value": 0.0,
         "unit": "Euro/tons"
     },
     "carbon_emissions_budget": {
@@ -12,7 +12,7 @@
         "unit": "gigatons"
     },
     "price_carbon_emissions_budget_overshoot": {
-        "default_value": 5000.0,
+        "default_value": 0.0,
         "unit": "Euro/tons"
     },
     "price_carbon_emissions": {
