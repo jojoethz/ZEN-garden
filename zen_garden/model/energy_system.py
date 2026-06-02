@@ -912,7 +912,7 @@ class EnergySystemRules(GenericRule):
         """
         # Pull weights from your config or parameters
         # If not in config, you can hardcode for testing: w_cost = 1.0, w_emis = 100.0
-        w_emis = 1e-5  # Example weight for emissions (adjust as needed)
+        w_emis = self.optimization_setup.analysis.get("weight_emissions", 100.0)  # Example weight for emissions (adjust as needed)
 
         # Sum of net present costs across all years
         total_cost_term = self.variables["net_present_cost"].sum()
