@@ -215,6 +215,7 @@ class Analysis(Subscriptable):
 
     dataset: str = ""
     objective: Literal["total_cost", "total_carbon_emissions", "weighted_sum"] = "total_cost"
+    weight_emissions: float = 1e-5
     sense: str = "min"
     subsets: Subsets = Subsets()
     header_data_inputs: HeaderDataInputs = HeaderDataInputs()
