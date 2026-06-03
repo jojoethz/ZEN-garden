@@ -555,10 +555,10 @@ class EnergySystem:
         self.rules.constraint_global_cost_budget()
 
         # disable carbon emissions budget overshoot
-        self.rules.constraint_carbon_emissions_budget_overshoot()
+        #self.rules.constraint_carbon_emissions_budget_overshoot()
 
         # disable annual carbon emissions overshoot
-        self.rules.constraint_carbon_emissions_annual_overshoot()
+        #self.rules.constraint_carbon_emissions_annual_overshoot()
 
     def construct_objective(self):
         """Constructs the pe.Objective of the class <EnergySystem>."""
@@ -888,7 +888,7 @@ class EnergySystemRules(GenericRule):
             
             # 2. Define your limit from the previous run
             target_cost = 1.07043248e+07 #all cost components, discounted to present value, for the solution of the previous run with carbon objective
-            epsilon = 0.0001 # 0.01% slack
+            epsilon = 0.00001 # 0.001% slack
             
             # 3. Add the constraint
             lhs = total_cost_expr

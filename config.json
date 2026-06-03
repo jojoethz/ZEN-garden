@@ -1,6 +1,6 @@
 {
   "analysis": {
-    "dataset": "Europe_calibrated",
+    "dataset": "Europe_calibrated_emissions",
     "objective": "total_carbon_emissions",
     "time_series_aggregation": {
       "solver": "gurobi"
