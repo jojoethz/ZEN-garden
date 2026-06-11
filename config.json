@@ -1,8 +1,6 @@
 {
   "analysis": {
     "dataset": "Europe_calibrated",
-    "objective": "weighted_sum",
-    "weight_emissions": 1e-5,
     "time_series_aggregation": {
       "solver": "gurobi"
     }
