@@ -567,6 +567,8 @@ class EnergySystem:
             objective = self.rules.objective_total_carbon_emissions(
                 self.optimization_setup.model
             )
+        elif self.optimization_setup.analysis.objective == "weighted_sum":
+            objective = self.rules.objective_weighted_sum(self.optimization_setup.model)
         else:
             raise KeyError(
                 f"Objective type {self.optimization_setup.analysis.objective} not known"
@@ -904,3 +906,19 @@ class EnergySystemRules(GenericRule):
             .at[sets["set_time_steps_yearly"][-1]]
             .to_linexpr()
         )
+    def objective_weighted_sum(self, model):
+        """
+        Minimizes: Total_Cost + w2 * Total_Emissions
+        """
+        # Pull weights from your config or parameters
+        # If not in config, you can hardcode for testing: w_cost = 1.0, w_emis = 100.0
+        w_emis = getattr(self.optimization_setup.analysis, "weight_emissions", 1e-5)  # Example weight for emissions (adjust as needed)
+
+        # Sum of net present costs across all years
+        total_cost_term = self.variables["net_present_cost"].sum()
+        
+        # Sum of annual emissions (you may want to apply the same discount factor 
+        # to emissions if you want them to be time-consistent with costs)
+        total_emissions_term = self.variables["carbon_emissions_annual"].sum()
+
+        return total_cost_term + w_emis * total_emissions_term

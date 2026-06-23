@@ -117,6 +117,15 @@ class Technology(Element):
             time_steps="set_time_steps_yearly",
             unit_category={"energy_quantity": 1, "time": -1},
         )
+
+        #NEW: lower capacity limit
+        self.capacity_lower_limit = self.data_input.extract_input_data(
+            "capacity_lower_limit",
+            index_sets=[set_location, "set_time_steps_yearly"],
+            time_steps="set_time_steps_yearly",
+            unit_category={"energy_quantity": 1, "time": -1},
+        )
+
         self.carbon_intensity_technology = self.data_input.extract_input_data(
             "carbon_intensity_technology",
             index_sets=[set_location],
@@ -649,6 +658,19 @@ class Technology(Element):
             doc="Parameter which specifies the capacity limit of technologies",
             calling_class=cls,
         )
+        # NEW: lower capacity limit of technologies
+        optimization_setup.parameters.add_parameter(
+            name="capacity_lower_limit",
+            index_names=[
+                "set_technologies",
+                "set_capacity_types",
+                "set_location",
+                "set_time_steps_yearly",
+            ],
+            capacity_types=True,
+            doc="Parameter which specifies the lower capacity limit of technologies",
+            calling_class=cls,
+        )
         # minimum load relative to capacity
         optimization_setup.parameters.add_parameter(
             name="min_load",
@@ -1042,6 +1064,9 @@ class Technology(Element):
         #  technology capacity_limit
         rules.constraint_technology_capacity_limit()
 
+        # NEW: technology capacity_lower_limit (Lower Limit)
+        rules.constraint_technology_capacity_lower_limit()
+
         # minimum capacity
         rules.constraint_technology_min_capacity_addition()
 
@@ -1075,6 +1100,9 @@ class Technology(Element):
         # min load constraints
         n_cons = len(model.constraints.items())
         rules.constraint_technology_on_off()
+
+        #can be used for comparison to limit investments in 2025
+        #rules.constraint_no_investment_2025()   
 
         # if nothing was added we can remove the tech vars again
         if len(model.constraints.items()) == n_cons:
@@ -1287,6 +1315,28 @@ class TechnologyRules(GenericRule):
         )
         self.constraints.add_constraint(
             "constraint_technology_capacity_limit_reached", constraints_reached
+        )
+
+    def constraint_technology_capacity_lower_limit(self):
+        """Constraint that installed capacity must be >= the defined lower limit."""
+        
+        # In TechnologyRules, we access variables and parameters directly via self
+        capacity = self.variables["capacity"]
+        capacity_lower_limit = self.parameters.capacity_lower_limit
+        
+        # Create a mask so we only build constraints where the user actually provided a number
+        mask = capacity_lower_limit > 0.0
+        
+        # Apply the mask using xarray's .where() so we don't build empty/NaN constraints
+        lhs = capacity.where(mask)
+        rhs = capacity_lower_limit.where(mask, 0.0)
+        
+        # Total Capacity >= Lower Bound
+        constraint = lhs >= rhs
+        
+        # Add the constraint to the model
+        self.constraints.add_constraint(
+            "constraint_technology_capacity_lower_limit", constraint
         )
 
     def constraint_technology_min_capacity_addition(self):
@@ -2084,4 +2134,22 @@ class TechnologyRules(GenericRule):
         constraints_3b = lhs_3b <= rhs_3b
         self.constraints.add_constraint(
             "constraint_technology_on_off_capacity_helper_upper_bound", constraints_3b
+        )
+    def constraint_no_investment_2025(self):
+        capacity_addition = self.variables["capacity_addition"]
+
+        first_year = capacity_addition.coords["set_time_steps_yearly"].values[0]
+
+        mask_2025 = (
+            capacity_addition.coords["set_time_steps_yearly"] == first_year 
+        )
+
+        lhs = self.align_and_mask(capacity_addition, mask_2025)
+
+        # Constraint
+        constraints = lhs == 0
+
+        self.constraints.add_constraint(
+            "constraint_no_investment_2025",
+            constraints
         )
