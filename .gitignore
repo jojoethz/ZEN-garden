@@ -17,6 +17,7 @@ zen_garden_env/
 *test.py
 /tests/testcases/test_1k__operation/*
 /tests/testcases/test_7b__operation/*
+/comparison.py
 
 # pytest monitor
 .pymon

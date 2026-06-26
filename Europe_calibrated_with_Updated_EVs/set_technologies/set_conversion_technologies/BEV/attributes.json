@@ -65,7 +65,7 @@
         ]
     },
     "capex_specific_conversion": {
-        "default_value": 0.01,
+        "default_value": 350000.0,
         "unit": "Euro/MW"
     },
     "input_carrier": {
