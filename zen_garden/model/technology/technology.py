@@ -118,11 +118,7 @@ class Technology(Element):
             unit_category={"energy_quantity": 1, "time": -1},
         )
 
-<<<<<<< HEAD
-        #NEW: lower capacity limit
-=======
         # lower capacity limit
->>>>>>> main
         self.capacity_lower_limit = self.data_input.extract_input_data(
             "capacity_lower_limit",
             index_sets=[set_location, "set_time_steps_yearly"],
