@@ -18,6 +18,7 @@ zen_garden_env/
 /tests/testcases/test_1k__operation/*
 /tests/testcases/test_7b__operation/*
 /comparison.py
+Ebb_joel_with_pp_new/
 
 # pytest monitor
 .pymon
