@@ -1,6 +1,16 @@
 energy_system
 =============
 
+price_carbon_emissions
+----------------------
+
+Step 1
+Manual modifications for Master Thesis
+
+**Citation**
+
+Joel (2026). Manual modifications for Master Thesis. ETH Zurich.
+
 discount_rate
 -------------
 
