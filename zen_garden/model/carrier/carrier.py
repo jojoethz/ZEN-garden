@@ -50,6 +50,11 @@ class Carrier(Element):
             index_sets=["set_nodes", "set_hours"],
             unit_category={"energy_quantity": 1, "time": -1},
         )
+
+        # Reference the extracted unit back to the original key 
+        # to satisfy the unit consistency checker downstream!
+        self.units["demand"] = self.units["demand_100"]
+
         self.raw_time_series["availability_import"] = (
             self.data_input.extract_input_data(
                 "availability_import",

@@ -38,5 +38,13 @@
     "price_shed_demand": {
         "default_value": 10000.0,
         "unit": "Euro/tonproduct"
+    },
+    "demand_100": {
+        "default_value": 0.0,
+        "unit": "tonproduct/hour"
+    },
+    "demand_90": {
+        "default_value": 0.0,
+        "unit": "tonproduct/hour"
     }
 }
