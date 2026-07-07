@@ -230,6 +230,7 @@ class Carrier(Element):
             index_sets=sets["set_nodes"],
             bounds=(0.0, 1.0),
             doc="Country-specific EV adoption level interpolating between 90% (0) and 100% (1)",
+            unit_category={},
         )
 
         # flow of imported carrier
