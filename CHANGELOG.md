@@ -3,7 +3,15 @@
 This file gets automatically updated in ZEN-garden's continuous integration 
 procedures. Do not edit the file manually.
 
-## [Unversioned Changes] - 2026-06-17 
+## [v2.13.0] - 2026-07-01 
+
+### New Features ✨
+- Infer the time step type from the index sets in `extract_input_data()`, and remove `time_step` argument. Align the time step naming internally to `set_hours` and `set_years` to make them clearer [[🔀 PR #1282](https://github.com/ZEN-universe/ZEN-garden/pull/1282) @jacob-mannhardt]
+
+## [v2.12.2] - 2026-06-17 
+
+### Bug Fixes 🐛
+- make code compatible with Pandas v3.0.0. [[🔀 PR #1278](https://github.com/ZEN-universe/ZEN-garden/pull/1278) @csfunke]
 
 ### Maintenance Tasks 🧹
 - upgrade `black` to patch security vulnerability. [[🔀 PR #1276](https://github.com/ZEN-universe/ZEN-garden/pull/1276) @csfunke]
