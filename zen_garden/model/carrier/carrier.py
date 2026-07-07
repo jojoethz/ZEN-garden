@@ -6,6 +6,7 @@ model.
 """
 
 import linopy as lp
+from linopy import variables
 import numpy as np
 import xarray as xr
 from linopy.expressions import LinearExpression
@@ -39,8 +40,13 @@ class Carrier(Element):
         # set attributes of carrier
         # raw import
         self.raw_time_series = dict()
-        self.raw_time_series["demand"] = self.data_input.extract_input_data(
-            "demand",
+        self.raw_time_series["demand_100"] = self.data_input.extract_input_data(
+            "demand_100",
+            index_sets=["set_nodes", "set_hours"],
+            unit_category={"energy_quantity": 1, "time": -1},
+        )
+        self.raw_time_series["demand_90"] = self.data_input.extract_input_data(
+            "demand_90",
             index_sets=["set_nodes", "set_hours"],
             unit_category={"energy_quantity": 1, "time": -1},
         )
@@ -124,9 +130,15 @@ class Carrier(Element):
         """
         # demand of carrier
         optimization_setup.parameters.add_parameter(
-            name="demand",
+            name="demand_100",
             index_names=["set_carriers", "set_nodes", "set_time_steps_operation"],
-            doc="Parameter which specifies the carrier demand",
+            doc="Parameter which specifies the 100% target carrier demand",
+            calling_class=cls,
+        )
+        optimization_setup.parameters.add_parameter(
+            name="demand_90",
+            index_names=["set_carriers", "set_nodes", "set_time_steps_operation"],
+            doc="Parameter which specifies the 90% target carrier demand",
             calling_class=cls,
         )
         # availability of carrier
@@ -206,6 +218,14 @@ class Carrier(Element):
         model = optimization_setup.model
         variables = optimization_setup.variables
         sets = optimization_setup.sets
+
+        variables.add_variable(
+            model,
+            name="ev_adoption_level",
+            index_sets=sets["set_nodes"],
+            bounds=(0.0, 1.0),
+            doc="Country-specific EV adoption level interpolating between 90% (0) and 100% (1)",
+        )
 
         # flow of imported carrier
         variables.add_variable(
@@ -553,8 +573,11 @@ class CarrierRules(GenericRule):
 
         # limit of shedding demand:
         #   either the demand (price != inf) or zero (price == inf)
-        lhs_shed_demand = self.variables["shed_demand"]
-        rhs_shed_demand = self.parameters.demand.where(mask, 0.0)
+        delta_demand_masked = (self.parameters.demand_100 - self.parameters.demand_90).where(mask, 0.0)
+        
+        # Formulate as: shed_demand - l * (D1 - D2) <= D2
+        lhs_shed_demand = self.variables["shed_demand"] - self.variables["ev_adoption_level"] * delta_demand_masked
+        rhs_shed_demand = self.parameters.demand_90.where(mask, 0.0)
         constraints_shed_demand = lhs_shed_demand <= rhs_shed_demand
 
         self.constraints.add_constraint("constraint_cost_shed_demand", constraints_cost)
@@ -676,9 +699,9 @@ class CarrierRules(GenericRule):
             flow_transport_in_vars = xr.DataArray(
                 -1,
                 coords=[
-                    self.parameters.demand.coords["set_carriers"],
-                    self.parameters.demand.coords["set_nodes"],
-                    self.parameters.demand.coords["set_time_steps_operation"],
+                    self.parameters.demand_90.coords["set_carriers"],
+                    self.parameters.demand_90.coords["set_nodes"],
+                    self.parameters.demand_90.coords["set_time_steps_operation"],
                     xr.DataArray(
                         np.arange(
                             len(self.sets["set_transport_technologies"])
@@ -884,9 +907,10 @@ class CarrierRules(GenericRule):
         # carrier import, demand and export
         term_carrier_import = self.variables["flow_import"].to_linexpr()
         term_carrier_export = self.variables["flow_export"].to_linexpr()
-        term_carrier_demand = self.parameters.demand
-        # shed demand
         term_carrier_shed_demand = self.variables["shed_demand"].to_linexpr()
+        
+        # Expressing the variable delta shift: -l * (D1 - D2)
+        term_dynamic_demand_adjustment = -(self.variables["ev_adoption_level"] * (self.parameters.demand_100 - self.parameters.demand_90))
 
         ### formulate the constraints
         lhs = lp.merge(
@@ -900,12 +924,13 @@ class CarrierRules(GenericRule):
                 term_carrier_import,
                 -term_carrier_export,
                 term_carrier_shed_demand,
+                term_dynamic_demand_adjustment, # Injected directly into the linopy matrix
             ],
             compat="broadcast_equals",
             join="outer",
             cls=LinearExpression,
         )
-        rhs = term_carrier_demand
+        rhs = self.parameters.demand_90 # Base case parameter serves as static RHS boundary
         aligned_idx = xr.align(lhs.coords, rhs, join="inner")[0]
         constraints = lhs.sel(aligned_idx) == rhs.sel(aligned_idx)
 
