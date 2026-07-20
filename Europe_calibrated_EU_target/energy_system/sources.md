@@ -1,8 +1,8 @@
 energy_system
 =============
 
-carbon_emissions_annual_limit
------------------------------
+price_carbon_emissions
+----------------------
 
 Step 1
 Manual modifications for Master Thesis
