@@ -1,8 +1,18 @@
 energy_system
 =============
 
-price_carbon_emissions
-----------------------
+carbon_emissions_budget
+-----------------------
+
+Step 1
+Manual modifications for Master Thesis
+
+**Citation**
+
+Joel (2026). Manual modifications for Master Thesis. ETH Zurich.
+
+carbon_emissions_annual_limit
+-----------------------------
 
 Step 1
 Manual modifications for Master Thesis
